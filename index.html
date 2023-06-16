@@ -1,0 +1,85 @@
+<!--
+File: index.html
+HW3
+Brian Cox, UMass Lowell Computer Science, brian_cox1@student.uml.edu
+Copyright (c) 2023 by Brian. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Created by BC on June 13, 2023 at 4:15 PM.
+Updated by BC on June 16, 2023 at 4:50 PM.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multiplication Table</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles.css">
+    <!-- I used a little jquery here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <h1>Multiplication table</h1>
+    <div id="content">
+        <div class="content-wrapper col-xs-12 col-sm-6 col-md-5">
+            <form name="inputForm">
+                <table id="input-table">
+                    <tbody>
+                        <tr class="form-group-row">
+                            <td colspan="3">
+                                <span class="instructions">
+                                    Enter Table Ranges
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="minRowLabel" for="minRow" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input id="minRow" type="minRow">
+                                <small id="minRowValid" class="form-text text-muted invalid-feedback"></small>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="maxRowLabel" for="maxRow" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input id="maxRow" type="maxRow" required>
+                                <small id="maxRowValid" class="form-text text-muted invalid-feedback"></small>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="minColLabel" for="minCol" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input id="minCol" type="minCol">
+                                <small id="minColValid" class="form-text text-muted invalid-feedback"></small>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td id="maxColLabel" for="maxCol" class="label-cell"></td>
+                            <td class="input-cell">
+                                <input id="maxCol" type="maxCol">
+                                <small id="maxColValid" class="form-text text-muted invalid-feedback"></small>
+                            </td>
+                        </tr>
+                        <tr class="form-group row">
+                            <td colspan="2">
+                                <button class="gen-btn" onclick="genTable(event)">Generate Table</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>

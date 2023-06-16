@@ -1,0 +1,117 @@
+/* some constants */
+:root {
+    --theme: rgb(29, 30, 34);
+    --background-theme: whitesmoke;
+    --text-theme: #444857;
+}
+
+body {
+    background-color: var(--background-theme);
+}
+
+body,
+body * {
+    color: var(--text-theme);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+}
+
+/* page title */
+h1 {
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#content {
+    height: 100%;
+    display: flex;
+}
+
+.content-wrapper {
+    box-sizing: border-box;
+    max-height: 200px !important;
+}
+
+/* center items on page */
+#input-table,
+#results {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    border: 1px solid var(--text-theme);
+    height: 100%;
+}
+
+#input-table * td {
+    white-space: nowrap;
+    padding: 4px;
+}
+
+.instructions {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+span.btn-wrapper {
+    width: 100%;
+}
+
+/* button size for generating table */
+.gen-btn {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* For scrollable container */
+table#results {
+    height: 600px;
+    width: 100%;
+    overflow: scroll;
+    display: block;
+}
+
+.content-wrapper,
+#results {
+    margin: 4px;
+}
+
+#results * {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 1px solid black;
+}
+
+#results * th,
+#results * td {
+    padding: 0 5px;
+}
+
+#results * th {
+    color: var(--background-theme);
+    background-color: var(--text-theme);
+}
+
+#results * tr:nth-child(2n) {
+    background-color: lightgrey;
+}
+
+#results * th#omitted {
+    background-color: var(--background-theme);
+    border: 1px solid var(--background-theme);
+}
+
+#minRowValid,
+#maxRowValid,
+#minColValid,
+#maxColValid {
+    color: red;
+    font-size: 8px;
+}
